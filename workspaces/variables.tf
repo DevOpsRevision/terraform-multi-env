@@ -1,0 +1,75 @@
+variable "project" {
+    default = "roboshop"
+}
+
+variable "ami_id" {
+    type = string
+    default = "ami-0220d79f3f480ecf5"
+    description = "AMI ID of JoinDevOps"
+}
+
+variable "instance_type" {
+    default ={
+        dev = "t3.micro"
+        prod = "t3.small"
+    }
+}
+
+variable "ec2_tags" {
+    default = {
+        Name = "Hello World"
+        Purpose = "variables-demo"
+    }
+}
+
+variable "sg_name" {
+    default = "vars-file-allow-all"
+}
+
+variable "sg_description" {
+    default = "Allowing all ports from internet"
+}
+
+variable "from_port" {
+    default = 0
+}
+
+variable "to_port" {
+    type = number
+    default = 0      
+}
+
+variable "cidr_blocks" {
+    type = list(string)
+    default = ["0.0.0.0/0"]  
+}
+
+variable "sg_tags" {
+    default = {
+        Name = "allow-all"
+    }
+}
+
+
+variable "instances" {
+    default = ["mongodb", "redis"]
+  
+}
+
+variable "zone_id" {
+    default = "Z09260871ALCRUTIR75TM"
+}
+
+variable "domain_name" {
+    default = "easydevops.fun"
+  
+}
+
+variable "common_tags" {
+    default = {
+        Project = "Roboshop"
+        Terraform = "true"
+    }
+}
+
+
