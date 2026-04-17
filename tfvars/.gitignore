@@ -1,9 +1,0 @@
-#Terraform
-.terraform/
-
-#State Files
-*.tfstate
-*.tfstate.backup
-
-#Generated Files
-inventory
