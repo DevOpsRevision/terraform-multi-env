@@ -1,0 +1,12 @@
+#Terraform
+**/.terraform/
+**/.terraform.lock.hcl
+
+#State Files
+*.tfstate
+*.tfstate.*
+
+#Generated Files
+inventory
+
+crash.log
